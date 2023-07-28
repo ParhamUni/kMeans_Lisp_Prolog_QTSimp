@@ -21,7 +21,7 @@ centroid(List,Cs):-
      length(List,L),
      media_(List,L,Cs).
 
-%Esegue la somma tra due vettori
+%Esegue la somma vettoriale tra due vettori
 vplus([],[],[]):-!.
 vplus([A|Ar], [B|Br], [N|R]):-
      number(A),
@@ -29,7 +29,7 @@ vplus([A|Ar], [B|Br], [N|R]):-
      N is A + B,
      vplus(Ar,Br,R).
 
-%Esegue la sottrazione tra due vettori
+%Esegue la differenza vettoriale tra due vettori
 vminus([],[],[]):-!.
 vminus([A|Ar], [B|Br], [N|R]):-
      number(A),
@@ -89,7 +89,7 @@ partition_(Obs,Cs,Pa):-
      pair_With_The_Closest_(Obs,Cs,Pair),
      make_partition_(Pair,Cs,Pa).
 
-% Riceve una lista di coppie (tuple) e, confrontando
+% Riceve una lista di coppie (tuple) e, confrontandole
 % con un centroide alla volta, forma i cluster.
 % Per diminuire i controlli con la lista di coppie, gli elementi
 % gia' inseriti nei cluster vengono rimossi dalla lista
@@ -99,8 +99,8 @@ make_partition_(A, [X|Xr], [List|R]) :-
     make_partition_(RestInput, Xr, R).
 
 % Riempie il cluster associato ad ogni centroide e restituisce
-% la lista di coppie senza gli elementiche hanno l'associazione
-% con il centroide gia analizzato
+% la lista di coppie senza gli elementi che hanno
+% l'associazione con il centroide gia analizzato
 fill_list_and_remove_frs_([], _, [], []):- !.
 fill_list_and_remove_frs_([(X, E)|Ar], X, [E|Lr], R):-
     fill_list_and_remove_frs_(Ar, X, Lr, R).
