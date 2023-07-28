@@ -10,7 +10,7 @@ Parametri ricorrenti:
 
 V_: vettore numerico
 OBS, centroids: liste di vettori numerici aventi dimensioni tra loro consistenti (ovvero aventi lo stesso numero di elementi). OBS sono sempre le observations. centroids è sempre una lista di centroidi.
-N, k: numeri interi non negativi. k è sempre il numero di centroidi
+n, k: numeri interi non negativi. k è sempre il numero di centroidi
 C: lista di cons-cells nelle quali il car è un vettore numerico ed il cdr un intero non negativo (che rappresenta il centroide associato al vettore)
 clusters: lista di liste di vettori numerici con dimensioni consistenti
 
