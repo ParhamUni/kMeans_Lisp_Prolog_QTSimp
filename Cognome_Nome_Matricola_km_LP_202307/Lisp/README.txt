@@ -136,7 +136,7 @@ controlla che tutti gli elementi di OBS siano n-dimesionali.
 - _is-vector: prende come parametro una lista L e si assicura che sia un vettore numerico controllando che L abbia profondità 1, 
 che il suo primo elemento sia un numero e che il resto soddisfi a sua volta il predicato.
 
-- _profondita: prende come parametro una lista L e restituisce la sua profondità.
+- _profondita: prende come parametro una lista L e restituisce la sua profondità (ritorna 0 se il parametro non è una lista).
 
 
 
